@@ -47,6 +47,81 @@ db.createUser( { user: "iquidus", pwd: "854uq3EhKVFC76f7DZIMszvHrOKytCnzGevSgtWv
 
 Close mongodb.
 
+exit
+
+git clone https://github.com/allforminers/Explorer.git explorer
+
+cd explorer && npm install --production
+
+Create the settings file.
+
+cp ./settings.json.template ./settings.json
+
+Original settings.json.
+
+
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "IQUIDUS",
+
+  "address": "127.0.0.1:3001",
+
+  // coin name
+  "coin": "Darkcoin",
+
+  // coin symbol
+  "symbol": "DRK",
+
+...
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "iquidus",
+    "password": "3xp!0reR",
+    "database": "explorerdb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 9332,
+    "user": "darkcoinrpc",
+    "pass": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
+  },
+
+  // confirmations
+  "confirmations": 40,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": true,
+    "richlist": true,
+    "twitter": true,
+    "facebook": false,
+    "googleplus": false,
+    "youtube": false,
+    "search": true,
+    "movement": true,
+    "network": true
+  },
+
+
+
 
 
 

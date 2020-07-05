@@ -93,6 +93,21 @@ Save the crontab.
 
 ![Explorer](https://i.imgur.com/RoNQBwz.png)
 
+______8________________________________________________
+
+Start a screen session.
+
+screen
+
+______9________________________________________________
+
+Start your block explorer.
+
+cd $HOME/explorer
+
+npm start
+
+
 
 
 

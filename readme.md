@@ -49,6 +49,8 @@ Close mongodb.
 
 exit
 
+______4________________________________________________
+
 git clone https://github.com/allforminers/Explorer.git explorer
 
 cd explorer && npm install --production
@@ -57,10 +59,42 @@ Create the settings file.
 
 cp ./settings.json.template ./settings.json
 
+
+______5________________________________________________
+
 Original settings.json.
 
-
 ![Explorer](https://i.imgur.com/Vc2bCZW.png)
+
+
+______6________________________________________________
+
+Get the path to your block explorer.
+
+cd $HOME/explorer
+
+pwd
+
+______7________________________________________________
+
+Open crontab
+
+crontab -e
+
+Paste the following lines to the bottom of the crontab.
+
+*/1 * * * * cd /root/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+
+*/5 * * * * cd /root/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+
+Save the crontab.
+
+![Explorer](https://i.imgur.com/RoNQBwz.png)
+
+
+
+
+
 
 
 

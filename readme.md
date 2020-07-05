@@ -53,7 +53,9 @@ ______4________________________________________________
 
 git clone https://github.com/allforminers/Explorer.git explorer
 
-cd explorer && npm install --production
+cd explorer  && unzip explorer.zip
+
+npm install --production -y
 
 Create the settings file.
 
